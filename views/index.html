@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <%- include('nav.html') %>
+   
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- <div class ="py-5 text-center">
+      <h1>홈 입니다.</h1>
+    </div> -->
+
+    <div class="card">
+      <div class="card-header">
+        소개
+      </div>
+      <img src="./images/me.jpg" width = "400" height = "500" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">about</h5>
+        <p class="card-text">안녕하세요. 어쩌구 저쩌구</p>
+        <a href="#" class="btn btn-primary">More</a>
+      </div>
+    </div>
+
+
+    <p class="row">
+      <p class="col">
+          <button class="w-100 btn btn-primary list">
+              게시판
+          </button>
+      </p>
+    </p>
+
+    <p class="row">
+      <p class="col">
+          <button class="w-100 btn btn-success signup">
+              회원가입
+          </button>
+      </p>
+    </p>
+
+    <p class="row">
+      <p class="col">
+          <button class="w-100 btn btn-warning login">
+              로그인
+          </button>
+      </p>
+    </p>
+
+    <!-- <div class="row">
+        <div class="col">
+            <button class="w-100 btn btn-success signup">
+                회원 가입
+            </button>
+        </div>
+        <div class="col">
+            <button class="w-100 btn btn-warning login">
+                로그인
+            </button>
+        </div>
+    </div> -->
+
+    <hr class="my-4">
+
+    <script>
+      $('.login').click(function(e){
+        var item = $(this);
+        console.log(item);
+        location.href = "\login";       
+      })
+
+      $('.signup').click(function(e){
+        var item = $(this);
+        console.log(item);
+        location.href = "\signup";       
+      })
+
+      $('.list').click(function(e){
+        var item = $(this);
+        console.log(item);
+        location.href = "\list";       
+      })
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

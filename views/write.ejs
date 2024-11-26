@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "/public/main.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="resources/css/plugin/datepicker/bootstrap-datepicker.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="resources/js/plugin/datepicker/bootstrap-datepicker.js"></script>
+  </head>
+  <body>
+
+    <%- include('nav.html') %>
+
+      <div class ="container mt-4">
+        <form action = "/add" method="post">
+          <div class="form-group">
+            <label>제목</label>
+            <input type="text" class="form-control" name = "title">
+          </div>
+          <div class="form-group">
+            <label>내용</label>
+            <!-- <input type="textarea" class="form-control" name = "date"> -->
+            <textarea class="form-control" name = "content" rows = '10'></textarea> 
+          </div>
+          <div class="form-group">
+            <label>날짜</label>
+            <input type="date"  class="form-control" name ="someDate" >
+          </div>
+          <p></p>
+          <p></p>
+          <button type = "submit" class="btn btn-outline-warning" style="float:right;">저장</button>
+        </form>
+      </div>
+
+      <div class="container mt-3">
+        <form action="/upload" method="POST" enctype = "multipart/form-data">
+            <input type="file" name="picture" class="btn btn-outline-primary"></input>
+            <button type = "submit" class="btn btn-outline-primary">첨부</button>
+        </form>
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
