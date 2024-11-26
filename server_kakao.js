@@ -517,7 +517,7 @@ app.get('/profile', (req, res) => {
     return res.redirect('/');
   }
   res.send(`
-    <h1>프로필</h1>
+    <h1>프로게이머</h1>
     <p>이름: ${req.user.displayName}</p>
     <p>이메일: ${req.user.email}</p>
     <a href="/logout">로그아웃</a>
