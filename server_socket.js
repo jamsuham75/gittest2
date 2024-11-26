@@ -22,7 +22,7 @@ io.on('connection', function(socket){
 })
 
 app.get("/", function (req, res) {
-  console.log('루');
+  console.log('루틴');
 })
 
 
